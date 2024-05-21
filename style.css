@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+.bg{
+    background-color: #F2F4F7;
+}
+
+.bg-1{
+    background-color: #1D232C;
+}
+
+.news-input{
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid #1D232C 3px;
+}
