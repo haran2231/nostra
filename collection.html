@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Nostra</title>
+</head>
+
+<body>
+
+    <!-- menu  -->
+    <header class="fixed z-10 hidden w-full mt-0 bg-white md:block">
+        <h1 class="py-2 text-2xl text-center text-white bg-black " id="offer">Sign Up and <span class="font-bold">GET
+                20% OFF</span> for your first Order <i class="ml-4 fa-solid fa-xmark" id="offer-close"></i></h1>
+        <nav class="flex justify-between mx-4 my-3 ">
+            <div>
+                <h1 class="text-2xl font-bold">Nostra</h1>
+            </div>
+            <ul class="flex gap-8">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html/" class="">New Arrival</a></li>
+                <li><a href="./index.html/">Most Wanted</a></li>
+                <li><a href="./collection.html">Collections</a></li>
+                <li><a href="./contactus.html">Contact US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+    <section class="pt-32 mb-10">
+        <div class="flex w-full">
+            <div class="w-1/4 ml-4 filter-section">
+                   
+                <h3 class="text-2xl font-bold">Occasion</h3>
+                <div class="my-3 text-2xl">
+                    <input type="checkbox" name="tags" value="summer"> Summer <br>
+                    <input type="checkbox" name="tags" value="party"> Party <br>
+                    <input type="checkbox" name="tags" value="beach"> Beach 
+
+                </div>
+               
+                <h3 class="text-2xl font-bold"> Colors </h3>
+                <div class="my-3 text-2xl">
+                <input type="checkbox" name="tags" value="red"> Red <br>
+                    <input type="checkbox" name="tags" value="blue"> Blue <br>
+                    <input type="checkbox" name="tags" value="white"> White <br>
+                    <input type="checkbox" name="tags" value="green"> Green
+                </div>
+
+                <h3 class="text-2xl font-bold"> Arrivals </h3>
+                <div class="my-3 text-2xl">
+                <input type="checkbox" name="tags" value="new"> New <br>
+                    <input type="checkbox" name="tags" value="old"> Old
+                  
+                </div>
+
+                
+                <hr class="vertical-line">
+            </div>
+
+            <div class="w-3/4 border-l-2 border-black border-solid ">
+                <div class="p-1 mx-5 border-2 border-black border-solid rounded-lg">
+                    <input type="text" class="w-full p-2 rounded-xl focus:outline-none" placeholder="Search">
+                </div>
+                <div class="mx-10 mt-10" id="new-arrivals ml-1">
+                    <h1 class="mt-5 text-2xl font-semibold">New Arrivals</h1>
+                    <div class="flex flex-wrap justify-between gap-4 mt-3">
+                        <div class="relative w-1/4">
+                            <img src="./images/1.jpg" alt="" class="img-style">
+                            <p>Floral Summer Shirt</p>
+                            <p>$220</p>
+                        </div>
+                        <div class="relative w-1/4">
+                            <img src="./images/2.jpg" alt="" class="img-style">
+                            <p>Summer Green</p>
+                            <p>$220</p>
+                        </div>
+                        <div class="relative w-1/4">
+                            <img src="./images/3.jpg" alt="" class="img-style">
+                            <p>Party Floral Shirt</p>
+                            <p>$220</p>
+                        </div>
+                        <div class="relative w-1/4">
+                            <img src="./images/4.jpg" alt="" class="img-style">
+                            <p>Floral Summer Shirt</p>
+                            <p>$220</p>
+                        </div>
+                        <div class="relative w-1/4">
+                            <img src="./images/5.jpg" alt="" class="img-style">
+                            <p>Beach Shirt</p>
+                            <p>$220</p>
+                        </div>
+                        <div class="relative w-1/4">
+                            <img src="./images/6.jpg" alt="" class="img-style">
+                            <p>Party Floral Shirt</p>
+                            <p>$220</p>
+                        </div>
+                        <div class="relative w-1/4">
+                            <img src="./images/7.jpg" alt="" class="img-style">
+                            <p>Floral Summer Shirt</p>
+                            <p>$220</p>
+                        </div>
+                        <div class="relative w-1/4">
+                            <img src="./images/1.jpg" alt="" class="img-style">
+                            <p>Shirt Party Red</p>
+                            <p>$220</p>
+                        </div>
+                        <div class="relative w-1/4">
+                            <img src="./images/2.jpg" alt="" class="img-style">
+                            <p>Party Floral Shirt</p>
+                            <p>$220</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- news letter -->
+    <section class="mt-12 mb-3 text-center">
+        <h1 class="my-3 text-5xl font-bold">Join our News Letter</h1>
+        <h1 class="text-3xl font-light">Signup for our email newspaper to get exclusive discounts, updates, and more
+        </h1>
+        <div>
+            <input type="text" class="w-3/5 py-2 my-2 border-b-2 border-solid news-input">
+        </div>
+        <div>
+            <button class="px-5 py-3 text-2xl text-white bg-black rounded-lg">Subscribe <i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="p-10 text-white bg-1">
+        <div class="my-5">
+            <h1 class="text-5xl font-bold">Nostra</h1>
+        </div>
+        <div>
+            <p class="text-3xl">The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those
+                interest</p>
+        </div>
+        <div class="flex gap-5 my-5 ml-1">
+            <i class="icon fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="icon fa-brands fa-twitter" style="color: #ffffff;"></i>
+            <i class="icon fa-brands fa-facebook" style="color: #ffffff;"></i>
+        </div>
+        <div>
+            <p class="text-3xl">@ 2023 Nostra.com</p>
+        </div>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
