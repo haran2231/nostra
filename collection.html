@@ -32,102 +32,90 @@
         </nav>
     </header>
 
-
-
-
-
     <section class="pt-32 mb-10">
         <div class="flex w-full">
             <div class="w-1/4 ml-4 filter-section">
-                   
                 <h3 class="text-2xl font-bold">Occasion</h3>
                 <div class="my-3 text-2xl">
-                    <input type="checkbox" name="tags" value="summer"> Summer <br>
-                    <input type="checkbox" name="tags" value="party"> Party <br>
-                    <input type="checkbox" name="tags" value="beach"> Beach 
-
+                    <input type="checkbox" id="summer" name="tags" value="summer"> Summer <br>
+                    <input type="checkbox" id="party" name="tags" value="party"> Party <br>
+                    <input type="checkbox" id="beach" name="tags" value="beach"> Beach
                 </div>
-               
-                <h3 class="text-2xl font-bold"> Colors </h3>
+
+                <h3 class="text-2xl font-bold">Colors</h3>
                 <div class="my-3 text-2xl">
-                <input type="checkbox" name="tags" value="red"> Red <br>
-                    <input type="checkbox" name="tags" value="blue"> Blue <br>
-                    <input type="checkbox" name="tags" value="white"> White <br>
-                    <input type="checkbox" name="tags" value="green"> Green
+                    <input type="checkbox" id="red" name="tags" value="red"> Red <br>
+                    <input type="checkbox" id="blue" name="tags" value="blue"> Blue <br>
+                    <input type="checkbox" id="white" name="tags" value="white"> White <br>
+                    <input type="checkbox" id="green" name="tags" value="green"> Green
                 </div>
 
-                <h3 class="text-2xl font-bold"> Arrivals </h3>
+                <h3 class="text-2xl font-bold">Arrivals</h3>
                 <div class="my-3 text-2xl">
-                <input type="checkbox" name="tags" value="new"> New <br>
-                    <input type="checkbox" name="tags" value="old"> Old
-                  
+                    <input type="checkbox" id="new" name="tags" value="new"> New <br>
+                    <input type="checkbox" id="old" name="tags" value="old"> Old
                 </div>
 
-                
                 <hr class="vertical-line">
             </div>
 
             <div class="w-3/4 border-l-2 border-black border-solid ">
                 <div class="p-1 mx-5 border-2 border-black border-solid rounded-lg">
-                    <input type="text" class="w-full p-2 rounded-xl focus:outline-none" placeholder="Search">
+                    <input type="text" class="w-full p-2 rounded-xl focus:outline-none" placeholder="Search" id="search">
                 </div>
                 <div class="mx-10 mt-10" id="new-arrivals ml-1">
                     <h1 class="mt-5 text-2xl font-semibold">New Arrivals</h1>
-                    <div class="flex flex-wrap justify-between gap-4 mt-3">
-                        <div class="relative w-1/4">
+                    <div class="flex flex-wrap justify-between gap-4 mt-3" id="product_search">
+                        <div class="relative w-1/4 product" data-occasion="summer" data-color="red" data-arrival="new">
                             <img src="./images/1.jpg" alt="" class="img-style">
                             <p>Floral Summer Shirt</p>
                             <p>$220</p>
                         </div>
-                        <div class="relative w-1/4">
+                        <div class="relative w-1/4 product" data-occasion="summer" data-color="green" data-arrival="new">
                             <img src="./images/2.jpg" alt="" class="img-style">
                             <p>Summer Green</p>
                             <p>$220</p>
                         </div>
-                        <div class="relative w-1/4">
+                        <div class="relative w-1/4 product" data-occasion="party" data-color="blue" data-arrival="old">
                             <img src="./images/3.jpg" alt="" class="img-style">
                             <p>Party Floral Shirt</p>
                             <p>$220</p>
                         </div>
-                        <div class="relative w-1/4">
+                        <div class="relative w-1/4 product" data-occasion="summer" data-color="red" data-arrival="new">
                             <img src="./images/4.jpg" alt="" class="img-style">
                             <p>Floral Summer Shirt</p>
                             <p>$220</p>
                         </div>
-                        <div class="relative w-1/4">
+                        <div class="relative w-1/4 product" data-occasion="beach" data-color="white" data-arrival="new">
                             <img src="./images/5.jpg" alt="" class="img-style">
                             <p>Beach Shirt</p>
                             <p>$220</p>
                         </div>
-                        <div class="relative w-1/4">
+                        <div class="relative w-1/4 product" data-occasion="party" data-color="blue" data-arrival="new">
                             <img src="./images/6.jpg" alt="" class="img-style">
                             <p>Party Floral Shirt</p>
                             <p>$220</p>
                         </div>
-                        <div class="relative w-1/4">
+                        <div class="relative w-1/4 product" data-occasion="summer" data-color="red" data-arrival="old">
                             <img src="./images/7.jpg" alt="" class="img-style">
                             <p>Floral Summer Shirt</p>
                             <p>$220</p>
                         </div>
-                        <div class="relative w-1/4">
+                        <div class="relative w-1/4 product" data-occasion="party" data-color="red" data-arrival="new">
                             <img src="./images/1.jpg" alt="" class="img-style">
                             <p>Shirt Party Red</p>
                             <p>$220</p>
                         </div>
-                        <div class="relative w-1/4">
+                        <div class="relative w-1/4 product" data-occasion="party" data-color="blue" data-arrival="new">
                             <img src="./images/2.jpg" alt="" class="img-style">
                             <p>Party Floral Shirt</p>
                             <p>$220</p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
 
     <!-- news letter -->
     <section class="mt-12 mb-3 text-center">
@@ -163,6 +151,7 @@
     </footer>
 
     <script src="./assets/script.js"></script>
+    <script src="./collection.js"></script>
 </body>
 
 </html>
