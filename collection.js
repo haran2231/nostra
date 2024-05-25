@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // console.log(checkbox.value);
             // Determine the filter category based on the text content of the previous sibling element (h3)
             if (checkbox.parentElement.previousElementSibling.textContent.includes('Occasion')) {
+                // console.log(Occasion);
                 // Add the value of the checkbox to the 'occasion' array
                 selectedFilters.occasion.push(checkbox.value);
             } else if (checkbox.parentElement.previousElementSibling.textContent.includes('Colors')) {
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let occasionMatch = true;
             if (selectedFilters.occasion.length) {
                 occasionMatch = selectedFilters.occasion.includes(occasion);
-                console.log(occasionMatch = selectedFilters.occasion.includes(occasion));
+                console.log(occasionMatch, "uuuuuu");
             }
 
             let colorMatch = true;
@@ -92,3 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+

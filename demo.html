@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #333;
+      margin: 0;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      overflow: hidden;
+    }
+
+    #slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    img.w-full {
+      width: 100%;
+      display: block;
+    }
+
+    .left-slider, .right-slider {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .left-slider {
+      left: 0;
+    }
+
+    .right-slider {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="left-slider"><button onclick="prev()"><i class="text-4xl fa-solid fa-angle-left" style="color: #ffffff;"></i></button></div>
+    <div id="slider"></div>
+    <div class="left-slider"><button onclick="prev()"><i class="text-4xl fa-solid fa-angle-left" style="color: #ffffff;"></i></button></div>
+
+    <!-- <div class="right-slider"><button onclick="next()"><i class="text-4xl fa-solid fa-angle-right" style="color: #ffffff;"></i></button></div> -->
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const images = [
+      './images/slider-one.jpg', // Replace with your image paths
+      './images/slider-two.jpg',
+      './images/slider-three.jpg'
+    ];
+
+    function showSlide(index) {
+      const slider = document.getElementById('slider');
+      currentSlide = (index + images.length) % images.length;  // Handle edge cases
+      slider.innerHTML = `<div class="text-center slides"><img src="${images[currentSlide]}" class="w-full" alt="Image description"></div>`;
+    }
+
+    function next() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prev() {
+      showSlide(currentSlide - 1);
+    }
+
+    // Initialize the slider with error handling and default image (optional)
+    try {
+      showSlide(currentSlide);
+    } catch (error) {
+      console.error("Error loading images:", error);
+      // Optionally display a default image or message
+    }
+  </script>
+</body>
+</html>

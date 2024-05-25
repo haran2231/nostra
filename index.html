@@ -13,11 +13,11 @@
 <body>
 
     <!-- menu  -->
-    <header class="fixed z-10 hidden w-full mt-0 bg-white md:block">
-        <h1 class="py-2 text-2xl text-center text-white bg-black " id="offer">Sign Up and <span class="font-bold">GET 20% OFF</span> for your first Order  <i class="ml-4 fa-solid fa-xmark" id="offer-close"></i></h1>
+    <header class="fixed z-10 w-full mt-0 bg-white md:block">
+        <h1 class="hidden py-2 text-2xl text-center text-white bg-black md:block " id="offer">Sign Up and <span class="font-bold">GET 20% OFF</span> for your first Order  <i class="ml-4 fa-solid fa-xmark" id="offer-close"></i></h1>
         <nav class="flex justify-between mx-4 my-3 ">
             <div><h1 class="text-2xl font-bold">Nostra</h1></div>
-            <ul class="flex gap-8">
+            <ul class="hidden gap-8 md:flex">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="#new-arrivals" class="">New Arrival</a></li>
                 <li><a href="#most">Most Wanted</a></li>
@@ -27,27 +27,61 @@
         </nav>
     </header>
 
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="bar_menu" class="absolute right-0 z-50 w-6 h-6 m-5 md:hidden">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="cancel_menu" class="absolute right-0 z-50 hidden w-6 h-6 m-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+
+    <!-- side nav  -->
+    <ul id="sidenavbar" class="fixed z-20 w-2/4 h-screen mt-10 text-center text-black transition-all duration-1000 bg-white -right-1/2 ">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#new-arrivals" class="">New Arrival</a></li>
+        <li><a href="#most">Most Wanted</a></li>
+        <li><a href="./collection.html">Collections</a></li>
+        <li><a href="./contactus.html">Contact US</a></li>
+    </ul>
+
     <!-- banner  -->
     <section class="pt-32 mx-5">
         <div class="relative w-full">
-            <div class="left-slider"><i id="slider-left-activate" class="text-4xl fa-solid fa-angle-left" style="color: #ffffff;"></i></div>
-        <div class="text-center">
-            <img src="./images/slider-one.jpg" class="w-full" alt="">
+            <!-- <div class="left-slider"><button onclick="prev()"><i id="slider-left-activate" class="text-4xl fa-solid fa-angle-left" style="color: #ffffff;"></i></button></div>
+        <div id="slider">
+            <div class="text-center slides">
+                <img src="./images/slider-one.jpg" class="w-full" alt="">
+            </div>
+            <div class="text-center slides">
+                <img src="./images/slider-one.jpg" class="w-full" alt="">
+            </div>
+            <div class="text-center slides">
+                <img src="./images/slider-one.jpg" class="w-full" alt="">
+            </div>
         </div>
-        <div class="right-slider"><i id="slider-right-activate" class="text-4xl fa-solid fa-angle-right" style="color: #ffffff;"></i></div>
-        <div class="content">
-            <h1 class="font-bold text-7xl">Level up your style with our</h1>
+        <div class="right-slider"><button onclick="next()" ><i id="slider-right-activate" class="text-4xl fa-solid fa-angle-right" style="color: #ffffff;"></i>next</button></div> -->
+       
+        <div class="slider-container">
+            <div class="left-slider" id="prevButton"><button onclick="prev()"><i class="text-4xl fa-solid fa-angle-left" style="color: #ffffff;"></i></button></div>
+            <div id="slider"></div>
+            <div class="z-40 right-slider" id="nextButton"><button onclick="next()"><i class="text-4xl fa-solid fa-angle-right" style="color: #ffffff;"></i></button></div>
+          </div>
+        <div class=" md:block content">
+            <h1 class="text-xl font-bold md:text-7xl">Level up your style with our</h1>
             <p class="my-3 font-bold">Summer Collections</p>
-            <button class="p-3 text-black bg-white">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+            <button  class="p-3 text-black bg-white">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
         </div>
         </div>
     </section>
 
+   
+      
+
     <!-- brands -->
     <section class="mt-10">
         <h1 class="ml-4 text-2xl font-semibold">Brands</h1>
-        <div class="flex justify-between mx-3 my-4">
-            <div class="flex flex-col items-center">
+        <div class="flex flex-col justify-between mx-3 my-4 md:flex-row">
+            <div class="flex flex-col items-center mt-4 md:mt-0">
                 <img src="./images/behance (1).png" alt="addidas" class="w-16">
                 <h1 class="mt-2 text-2xl">Behance</h1>
             </div>
@@ -80,17 +114,17 @@
 
     <!-- customer experince -->
     <section>
-        <div class="flex items-center justify-between mx-3 mt-20 mb-2">
+        <div class="flex flex-col items-center justify-between mx-3 mt-20 mb-2 md:flex-row">
             <div>
                 <h1 class="mb-2 text-4xl font-bold">We Provide Best</h1>
                 <h1 class="text-4xl font-bold">Customer Experiences</h1>
             </div>
-            <div>
+            <div class="mt-2 md:m-0">
                 <p class="text-2xl">|| We ensure that our customer have the best shopping experience</p>
             </div>
         </div>
 
-        <div class="flex mx-3 mt-10 justify-evenly">
+        <div class="flex flex-col mx-3 mt-10 md:flex-row justify-evenly">
             <div class="p-2 mx-2 bg rounded-xl">
                 <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-circle-check"></i>
                 <h2 class="font-bold">Original Products</h2>
@@ -148,64 +182,64 @@
             <div class="relative">
                 <img src="./images/1.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
             </div>
            <div class="relative">
                 <img src="./images/2.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
             </div>
            <div class="relative">
                 <img src="./images/3.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
             </div>
            <div class="relative">
                 <img src="./images/4.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
             </div>
            <div class="relative">
                 <img src="./images/5.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
-                <img class="hidden like-button" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <!-- <img class="hidden like-button" src="./images/redheart.png" alt=""> -->
             </div>
            <div class="relative">
                 <img src="./images/6.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
             </div>
            <div class="relative">
                 <img src="./images/7.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
             </div>
            <div class="relative">
                 <img src="./images/1.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
             </div>
            <div class="relative">
                 <img src="./images/3.jpg" class="img-style" alt="">
                 <p class="sale-overlay">Sale</p>
-                <img class="like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
-                <img class="hidden like-button" id="wish-list-red" src="./images/redheart.png" alt="">
+                <img class="w-3 like-button" id="wish-list-black" src="./images/blackheart.png" alt="">
+                <img class="hidden w-3 like-button" id="wish-list-red" src="./images/redheart.png" alt="">
             </div>
         </div>
     </section>
     
 
     <!-- limited offer -->
-    <section class="flex items-center justify-center gap-10 mx-2 mt-4 text-white bg-1">
+    <section class="items-center justify-center gap-10 mx-2 mt-4 text-center text-white md:text-left md:flex bg-1">
 
         <div class="py-8">
             <img src="./images/offer.jpg" alt="">
